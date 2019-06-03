@@ -6,7 +6,11 @@ namespace dotnet
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            string filepath = args[0];
+            System.Console.WriteLine(filepath);
+            var reader = new Reader();
+            reader.Read(filepath);
+            reader.PrintDictionary();
         }
     }
 }
