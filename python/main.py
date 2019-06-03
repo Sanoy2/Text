@@ -6,7 +6,7 @@ def main():
     reader = Reader()
     reader.read(filepath)
     # reader.print()
-    reader.print_statistic()
+    # reader.print_statistic()
 
 
 if __name__ == "__main__":

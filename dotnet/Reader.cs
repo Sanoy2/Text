@@ -30,7 +30,7 @@ namespace dotnet
                         {
                             newWord = newWord.ToLower();
                             Increment(newWord);
-                            System.Console.WriteLine(newWord);
+                            // System.Console.WriteLine(newWord);
                         }
                     }
                 }

@@ -7,7 +7,7 @@ Reader::Reader()
 
 void Reader::Read(std::string filepath)
 {
-    std::cout << filepath << std::endl;
+    // std::cout << filepath << std::endl;
     std::ifstream file(filepath);
     std::string line;
     while (std::getline(file, line))

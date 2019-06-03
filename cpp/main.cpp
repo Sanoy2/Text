@@ -10,6 +10,6 @@ int main(int argc, char** argv)
     Reader reader;
     reader.Read(filepath);
 
-    reader.Print();
+    // reader.Print();
     return 0;
 }

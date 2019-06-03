@@ -5,7 +5,7 @@ class Reader:
         self.dict = {}
 
     def read(self, filepath):
-        print(filepath)
+        # print(filepath)
         file = open(filepath, "r")
         for line in file:
             for word in line.split():
