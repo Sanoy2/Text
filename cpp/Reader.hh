@@ -5,7 +5,9 @@
 #include <fstream>
 #include <string>
 #include <regex>
+#include <vector>
 #include <map>
+#include <boost/algorithm/string.hpp>
 
 class Reader
 {

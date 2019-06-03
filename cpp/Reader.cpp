@@ -12,7 +12,22 @@ void Reader::Read(std::string filepath)
     std::string line;
     while (std::getline(file, line))
     {
-        std::cout << line << std::endl;
+        std::vector<std::string> words;
+        // split here
+        boost::split(words, line, [](char c)
+        {
+            return c == ' ';
+        });
+
+        for (auto &word : words) // access by reference to avoid copying
+        {
+            std::string newWord = RemoveSpecials(word);
+            if(!IsEmpty(newWord))
+            {
+                std::transform(newWord.begin(), newWord.end(), newWord.begin(), ::tolower);
+                Increment(newWord);
+            }
+        }
     }
 }
 
@@ -42,6 +57,7 @@ void Reader::Print()
 {
     for(auto elem : dictionary)
     {
-        std::cout << elem.first << " " << elem.second << std::endl;
+        std::cout << "Key: " << elem.first << ", Value: " << elem.second << std::endl;
     }
+    std::cout << dictionary.size() << " words in dictionary" << std::endl;
 }
