@@ -1,0 +1,6 @@
+Przetwarzanie tekstu
+Wczytaj linie
+Rozbij linie na slowa
+Usun znaki specjalne
+To lower case
+Utworz slownik z liczba slow (klucz - slowo ; wartosc - liczba wystapien)

@@ -1,0 +1,20 @@
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+Curabitur tristique sagittis dui non sodales. Ut risus ligula, pulvinar quis porta non, auctor sit amet massa. Integer sit amet dui eu ipsum varius laoreet. Duis condimentum placerat ex, sit amet placerat erat congue at. Aenean at leo vitae velit congue luctus. Integer et eleifend mi, tincidunt accumsan dolor. Donec semper aliquet urna at mattis. Nam erat eros, rhoncus nec aliquet a, placerat sed purus. Duis vulputate ligula a finibus dapibus. Nulla facilisi.
+<!doctype html>
+<html lang="en" style="margin: 0; padding: 0; height: 100%;">
+
+<head>
+  <meta charset="utf-8">
+  <title>FrontendMultimedia</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body style="margin:0; padding: 0; height: 100%; background: #4CAF50;">
+
+  <app-root></app-root>
+</body>
+
+</html>
