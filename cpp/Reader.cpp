@@ -61,3 +61,24 @@ void Reader::Print()
     }
     std::cout << dictionary.size() << " words in dictionary" << std::endl;
 }
+
+void Reader::PrintStatistics()
+{
+    std::cout << NumberOfDifferentWords() << " different keys" << std::endl;
+    std::cout << NumberOfWords() << " words in text" << std::endl;
+}
+
+int Reader::NumberOfWords()
+{
+    int numberOfWords = 0;
+    for(auto elem : dictionary)
+    {
+        numberOfWords += elem.second;
+    }
+    return numberOfWords;
+}
+
+int Reader::NumberOfDifferentWords()
+{
+    return dictionary.size();
+}

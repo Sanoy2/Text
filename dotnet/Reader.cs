@@ -67,5 +67,28 @@ namespace dotnet
                 System.Console.WriteLine($"Key = {pair.Key}, Value = {pair.Value}");
             }
         }
+
+        public void PrintStatistics()
+        {
+            System.Console.WriteLine($"{NumberOfDifferentWords()} different keys");
+            System.Console.WriteLine($"{NumberOfWords()} words in text");
+            // print("{0} different keys".format(self.number_of_different_words()))
+            // print("{0} words in text".format(self.number_of_words()))
+        }
+
+        private int NumberOfDifferentWords()
+        {
+            return dictionary.Keys.Count;
+        }
+
+        private int NumberOfWords()
+        {
+            int numberOfWords = 0;
+            foreach( KeyValuePair<string, int> pair in dictionary)
+            {
+                numberOfWords += pair.Value;
+            }
+            return numberOfWords;
+        }
     }
 }

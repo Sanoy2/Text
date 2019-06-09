@@ -11,6 +11,7 @@ namespace dotnet
             var reader = new Reader();
             reader.Read(filepath);
             // reader.PrintDictionary();
+            reader.PrintStatistics();
         }
     }
 }

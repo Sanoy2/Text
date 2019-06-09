@@ -17,11 +17,14 @@ class Reader
         std::string RemoveSpecials(std::string);
         bool IsEmpty(std::string);
         void Increment(std::string);
+        int NumberOfWords();
+        int NumberOfDifferentWords();
 
     public: 
         Reader();
         void Read(std::string);
         void Print();
+        void PrintStatistics();
 };
 
 #endif

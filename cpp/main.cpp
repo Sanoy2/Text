@@ -11,5 +11,6 @@ int main(int argc, char** argv)
     reader.Read(filepath);
 
     // reader.Print();
+    reader.PrintStatistics();
     return 0;
 }
