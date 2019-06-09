@@ -23,13 +23,13 @@ namespace dotnet
                 while(!reader.EndOfStream)
                 {
                     string line = reader.ReadLine();
+                    line = RemoveSpecials(line);
                     foreach (var word in line.Split())
                     {
-                        var newWord = RemoveSpecials(word);
-                        if(!IsEmpty(newWord))
+                        // var newWord = RemoveSpecials(word);
+                        if(!IsEmpty(word))
                         {
-                            newWord = newWord.ToLower();
-                            Increment(newWord);
+                            Increment(word.ToLower());
                             // System.Console.WriteLine(newWord);
                         }
                     }
@@ -56,7 +56,7 @@ namespace dotnet
 
         private string RemoveSpecials(string word)
         {
-            string result = Regex.Replace(word, "[^a-zA-Z]", "");
+            string result = Regex.Replace(word, "[^A-Za-z\\s]+", "");
             return result;
         }   
 

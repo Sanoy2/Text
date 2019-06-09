@@ -10,7 +10,7 @@ namespace dotnet
             // System.Console.WriteLine(filepath);
             var reader = new Reader();
             reader.Read(filepath);
-            // reader.PrintDictionary();
+            reader.PrintDictionary();
             reader.PrintStatistics();
         }
     }
