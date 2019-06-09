@@ -2,7 +2,7 @@
 
 Reader::Reader()
 {
-    pattern = std::regex("[^a-zA-Z]");
+    pattern = std::regex("[^A-Za-z\\s]+");
 }
 
 void Reader::Read(std::string filepath)
@@ -12,8 +12,8 @@ void Reader::Read(std::string filepath)
     std::string line;
     while (std::getline(file, line))
     {
+        line = RemoveSpecials(line);
         std::vector<std::string> words;
-        // split here
         boost::split(words, line, [](char c)
         {
             return c == ' ';
@@ -21,11 +21,10 @@ void Reader::Read(std::string filepath)
 
         for (auto &word : words) // access by reference to avoid copying
         {
-            std::string newWord = RemoveSpecials(word);
-            if(!IsEmpty(newWord))
+            if(!IsEmpty(word))
             {
-                std::transform(newWord.begin(), newWord.end(), newWord.begin(), ::tolower);
-                Increment(newWord);
+                std::transform(word.begin(), word.end(), word.begin(), ::tolower);
+                Increment(word);
             }
         }
     }

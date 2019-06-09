@@ -8,12 +8,10 @@ class Reader:
         # print(filepath)
         file = open(filepath, "r")
         for line in file:
+            line = self.remove_specials(line)
             for word in line.split():
-                new_word = self.remove_specials(word)
-                if not self.is_empty(new_word):
-                    new_word = new_word.lower()
-                    # print(new_word)
-                    self.increment(new_word)
+                if not self.is_empty(word):
+                    self.increment(word.lower())
 
 
     def increment(self, word):
@@ -28,7 +26,7 @@ class Reader:
 
 
     def remove_specials(self, word):
-        return re.sub("[^a-zA-Z]", '', word)
+        return re.sub("[^A-Za-z\\s]+", '', word)
 
 
     def print(self):

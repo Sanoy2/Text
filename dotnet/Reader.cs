@@ -24,13 +24,12 @@ namespace dotnet
                 {
                     string line = reader.ReadLine();
                     line = RemoveSpecials(line);
-                    foreach (var word in line.Split())
+                    List<string> words = line.Split().ToList();
+                    foreach (var word in words)
                     {
-                        // var newWord = RemoveSpecials(word);
                         if(!IsEmpty(word))
                         {
                             Increment(word.ToLower());
-                            // System.Console.WriteLine(newWord);
                         }
                     }
                 }
